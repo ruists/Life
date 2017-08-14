@@ -22,11 +22,14 @@ public class Life {
     }
     
     public static void main(String[] args) {
-        if(args.length != 2)
-            throw new IllegalArgumentException("You have to provide height and width.");
-        int h = Integer.parseInt(args[0]);
-        int w = Integer.parseInt(args[1]);
-        
+        int h, w;
+        if(args.length != 2) {
+            h = 600;
+            w = 600;
+        } else {
+            h = Integer.parseInt(args[0]);
+            w = Integer.parseInt(args[1]);
+        }
         new Life(h,w);
     }
     
